@@ -20,6 +20,5 @@ def lista():
      indice = len(lista_de_numeros)
      promedio = suma/ indice
      print(promedio)
-  
-     
+   
 lista()
