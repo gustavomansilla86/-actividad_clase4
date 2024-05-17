@@ -1,3 +1,0 @@
-iniciando...
-**probando negrita**
-*probando cursiva*
