@@ -1,13 +1,12 @@
-
-   
-
-def tareas_en_gestion():
-  tareas = []
+tareas = []
  
-  tareas.insert(0, {"nombre": "limpiar", "descripcion": "limpiar todo", "estado": "sin procesar"})
-  tareas.insert(1, {"nombre": "cocinar", "descripcion": "cocinar algo", "estado": "sin proceso"})
-  tareas.insert(2, {"nombre": "mantenimiento", "descripcion": "poner en punto", "estado": "sin procesar"})
-  tareas.insert(3, {"nombre": "tpm diario","descripcion": "limpieza y orden diario","estado": "sin procesar"})
+tareas.insert(0, {"nombre": "limpiar", "descripcion": "limpiar todo", "estado": "sin procesar"})
+tareas.insert(1, {"nombre": "cocinar", "descripcion": "cocinar algo", "estado": "sin proceso"})
+tareas.insert(2, {"nombre": "mantenimiento", "descripcion": "poner en punto", "estado": "sin procesar"})
+tareas.insert(3, {"nombre": "tpm diario","descripcion": "limpieza y orden diario","estado": "sin procesar"})
+ 
+def tareas_en_gestion():
+  
    
   print("TAREAS A VISIALIZAR:")
 
@@ -32,20 +31,21 @@ def tareas_en_gestion():
   else:
        print("no se modifico ninguna tarea")
      
-   
-  eliminar = print(input("desea eliminar alguna tarea? si o no: "))
-  if eliminar.lower() == "si":
-    numero_de_tarea= print(int(input("eliga el numero de tarea a eliminar:")))-1
+def eliminar_tarea():
+   eliminar = print(input("desea eliminar alguna tarea? si o no: "))
+   if eliminar == "si":
+     numero_de_tarea= print(int(input("eliga el numero de tarea a eliminar:")))-1
     
-    tareas.pop[numero_de_tarea]
-    print(f"tarea {numero_de_tarea} eliminada")
+     tareas.pop[numero_de_tarea]
+     print(f"tarea {numero_de_tarea} eliminada")
 
-    for i, tarea in enumerate(tareas):
+     for i, tarea in enumerate(tareas):
         print(F"Tarea {i+1}:")
         print(f"Nombre: {tarea['nombre']}")
         print(f"Descripcion: {tarea['descripcion']}")
         print(f"Estado: {tarea['estado']}")
-  else:
+   else:
        print("no se elimino ninguna tarea")
 
 tareas_en_gestion()
+eliminar_tarea()
